@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска заметок</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/card.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+</head>
+<body>
+    <header>
+        <h1>Доска заметок</h1>
+    </header>
+
+    <div class="container">
+        <form id="noteForm">
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    id="noteTitle" 
+                    placeholder="Заголовок заметки" 
+                    maxlength="50" 
+                    required
+                >
+                <div class="char-counter">0/50</div>
+            </div>
+
+            <div class="form-group">
+                <textarea 
+                    id="noteText" 
+                    placeholder="Текст заметки" 
+                    maxlength="200" 
+                    required rows="4" 
+                ></textarea>
+                <div class="char-counter">0/200</div>
+            </div>
+
+            <button type="submit">Добавить заметку</button>
+        </form>
+
+        <button id="clearAllBtn">Очистить все заметки</button>
+
+        <div id="notesContainer">
+           
+        </div>
+    </div>
+
+    <footer>
+        <p> 20хх какойто год со сделанной работой </p>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/card.js"></script>
+    <script src="scripts/dom.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
